@@ -214,7 +214,7 @@ function genResultGrid() {
         'row',
         shakeRowIndex === index && 'shake',
         success && currentRowIndex === index && 'jump'
-      ]
+      ]"
     >
       <div
         v-for="(tile, index) in row"
@@ -228,7 +228,7 @@ function genResultGrid() {
           :style="{
             transitionDelay: `${index * 300}ms`,
             animationDelay: `${index * 100}ms`
-          }
+          }"
         >
           {{ tile.letter }}
         </div>
