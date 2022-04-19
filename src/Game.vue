@@ -179,10 +179,10 @@ function genResultGrid() {
     </div>
   </Transition>
   <header>
-    <h1>VVORDLE</h1>
+    <h1>Hermeneutle</h1>
     <a
       id="source-link"
-      href="https://github.com/yyx990803/vue-wordle"
+      href="https://github.com/allisonedith/hermeneutle"
       target="_blank"
       >Source</a
     >
@@ -248,7 +248,7 @@ function genResultGrid() {
 }
 .row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-gap: 5px;
 }
 .tile {
