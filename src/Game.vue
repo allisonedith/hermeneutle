@@ -73,11 +73,11 @@ function clearTile() {
 function completeRow() {
   if (currentRow.every((tile) => tile.letter)) {
     const guess = currentRow.map((tile) => tile.letter).join('')
-    if (!allWords.includes(guess) && guess !== answer) {
-      shake()
-      showMessage(`Not in word list`)
-      return
-    }
+    // if (!allWords.includes(guess) && guess !== answer) {
+    //  shake()
+    //  showMessage(`Not in word list`)
+    //  return
+    // }
 
     const answerLetters: (string | null)[] = answer.split('')
     // first pass: mark correct ones
