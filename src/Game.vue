@@ -17,6 +17,10 @@ function toggleAbout(event: MouseEvent) {
   // Block navigation from clicking the link
   event.preventDefault()
   
+  // Remove focus so that the next Enter press enters a guess instead of
+  // activating the link via the keyboard
+  aboutLink.blur()
+  
 // Board state. Each tile is represented as { letter, state }
 const board = $ref(
   Array.from({ length: 6 }, () =>
