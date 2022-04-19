@@ -185,12 +185,6 @@ function genResultGrid() {
 </script>
 
 <template>
-  <Transition>
-    <div class="message" v-if="message">
-      {{ message }}
-      <pre v-if="grid">{{ grid }}</pre>
-    </div>
-  </Transition>
   <header>
     <a href="#about" ref="aboutLink" id="about-link" @click="toggleAbout">
       {{ showingAbout ? "close" : "about" }}
@@ -207,6 +201,12 @@ function genResultGrid() {
     <About></About>
   </template>
   <template v-else>
+  <Transition>
+    <div class="message" v-if="message">
+      {{ message }}
+      <pre v-if="grid">{{ grid }}</pre>
+    </div>
+  </Transition>
   <div id="board">
     <div
       v-for="(row, index) in board"
