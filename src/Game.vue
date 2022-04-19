@@ -227,7 +227,7 @@ function genResultGrid() {
   box-sizing: border-box;
   --height: calc(var(--vh, 100vh) - 310px);
   height: var(--height);
-  width: calc(var(--height) / 6 * 9);
+  width: calc(var(--height) / 6 * 5);
   margin: 0px auto;
 }
 .message {
