@@ -14,6 +14,9 @@ const aboutLink = $ref<HTMLAnchorElement>()
 function toggleAbout(event: MouseEvent) {
   showingAbout = !showingAbout
 
+  // Block navigation from clicking the link
+  event.preventDefault()
+  
 // Board state. Each tile is represented as { letter, state }
 const board = $ref(
   Array.from({ length: 6 }, () =>
