@@ -3,9 +3,16 @@ import { onUnmounted } from 'vue'
 import { getWordOfTheDay, allWords } from './words'
 import Keyboard from './Keyboard.vue'
 import { LetterState } from './types'
+import About from './About.vue'
 
 // Get word of the day
 const answer = getWordOfTheDay()
+
+// Set up About link/page
+let showingAbout = $ref(false)
+const aboutLink = $ref<HTMLAnchorElement>()
+function toggleAbout(event: MouseEvent) {
+  showingAbout = !showingAbout
 
 // Board state. Each tile is represented as { letter, state }
 const board = $ref(
@@ -179,6 +186,9 @@ function genResultGrid() {
     </div>
   </Transition>
   <header>
+    <a href="#about" ref="aboutLink" id="about-link" @click="toggleAbout">
+      {{ showingAbout ? "close" : "about" }}
+    </a>
     <h1>Hermeneutle</h1>
     <a
       id="source-link"
@@ -187,6 +197,10 @@ function genResultGrid() {
       >Source</a
     >
   </header>
+  <template v-if="showingAbout">
+    <About></About>
+  </template>
+  <template v-else>
   <div id="board">
     <div
       v-for="(row, index) in board"
@@ -216,6 +230,7 @@ function genResultGrid() {
     </div>
   </div>
   <Keyboard @key="onKey" :letter-states="letterStates" />
+  </template>
 </template>
 
 <style scoped>
