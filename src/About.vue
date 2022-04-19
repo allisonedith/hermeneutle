@@ -1,5 +1,3 @@
-// from https://github.com/rossjrw/curdle/tree/main/src
-
 <template>
   <div>
     <p>
