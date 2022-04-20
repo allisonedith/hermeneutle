@@ -187,14 +187,14 @@ function genResultGrid() {
 <template>
   <header>
     <a
-      align="left"
+      style="text-align:left"
       id="source-link"
       href="https://github.com/allisonedith/hermeneutle"
       target="_blank"
       >Source</a
     >
-    <h1 align="center">Hermeneutle</h1>
-    <a align="right" href="#about" ref="aboutLink" id="about-link" @click="toggleAbout">
+    <h1 style="text-align:center">Hermeneutle</h1>
+    <a style="text-align:right" href="#about" ref="aboutLink" id="about-link" @click="toggleAbout">
       {{ showingAbout ? "close" : "about" }}
     </a>
   </header>
