@@ -126,7 +126,7 @@ function completeRow() {
       setTimeout(() => {
         grid = genResultGrid()
         showMessage(
-          ['Genius', 'Magnificent', 'Impressive', 'Splendid', 'Great', 'Phew'][
+          ['Genius', 'Magnificent', 'Impressive', 'Splendid', 'Great', 'Took you almost as long as Psalm 119!'][
             currentRowIndex
           ],
           -1
