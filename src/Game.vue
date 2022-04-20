@@ -193,9 +193,13 @@ function genResultGrid() {
       >Source</a
     >
     <h1>Hermeneutle</h1>
-    <a href="#about" ref="aboutLink" id="about-link" @click="toggleAbout">
-      {{ showingAbout ? "close" : "about" }}
-    </a>
+    <a 
+      href="#about" 
+      ref="aboutLink" 
+      id="about-link" 
+      @click="toggleAbout"
+      >{{ showingAbout ? "Close" : "About" }</a
+    >
   </header>
   <template v-if="showingAbout">
     <About></About>
