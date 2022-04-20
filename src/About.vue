@@ -16,33 +16,5 @@
       The answer can be any set of 5 letters, but the player will be informed
       whether or not it's in the dictionary:
     </p>
-    <ul>
-      <li>
-        This word either <i>already has been</i> or <i>one day will be</i> the
-        day's official Wordle answer (unless Wordle's answer list changes).
-        There are {{ dictionary.common.length.toLocaleString() }} such words.
-      </li>
-      <li>
-        This word will never be the day's Wordle answer, but Wordle will accept
-        it as a possible guess. There are such words.
-      </li>
-      <li>
-        This word isn't in Wordle's dictionary. It can still be the Curdle
-        answer, but <i>all</i> guesses will be allowed, making it significantly
-        more difficult. Make sure to give your player a clue!
-      </li>
-    </ul>
   </div>
 </template>
-
-<style scoped>
-div {
-  text-align: left;
-  position: relative;
-  padding: 0.5em;
-}
-
-button {
-  float: right;
-}
-</style>
